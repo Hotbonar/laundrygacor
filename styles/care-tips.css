@@ -1,0 +1,1355 @@
+
+/* =====================================================
+   LAUNDRY GACOR
+   CARE TIPS PAGE
+   External CSS Stylesheet
+   ===================================================== */
+
+
+/* =====================================================
+   01. GLOBAL SETTINGS
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #263746;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =====================================================
+   02. HEADER
+   ===================================================== */
+
+.site-header {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #dceff2;
+
+    box-shadow: 0 3px 15px rgba(0, 91, 145, 0.07);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* =====================================================
+   03. BRAND LOGO
+   ===================================================== */
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #087dbb;
+    font-size: 21px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.brand-logo img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   04. NAVIGATION
+   ===================================================== */
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    list-style: none;
+}
+
+.navigation-list li a {
+    display: block;
+    padding: 9px 12px;
+
+    color: #526675;
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* Navigation Hover */
+
+.navigation-list li a:hover {
+    color: #087dbb;
+    background-color: #eaf8fc;
+}
+
+
+/* Active Navigation */
+
+.navigation-list li a.active {
+    color: #ffffff;
+    background-color: #087dbb;
+}
+
+
+/* =====================================================
+   05. HERO SECTION
+   ===================================================== */
+
+.care-hero {
+    position: relative;
+
+    max-width: 1200px;
+    min-height: 460px;
+
+    margin: 35px auto;
+    padding: 55px 65px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+
+    align-items: center;
+    gap: 45px;
+
+    background: linear-gradient(
+        120deg,
+        #eafafb,
+        #d6f5f5,
+        #effcff
+    );
+
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+
+/* Hero Decorative Circle */
+
+.care-hero::before {
+    content: "";
+
+    position: absolute;
+    top: -110px;
+    left: 45%;
+
+    width: 250px;
+    height: 250px;
+
+    background-color: rgba(82, 216, 210, 0.15);
+
+    border: 2px solid rgba(8, 125, 187, 0.08);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.care-hero::after {
+    content: "";
+
+    position: absolute;
+    bottom: -130px;
+    right: 15%;
+
+    width: 280px;
+    height: 280px;
+
+    background-color: rgba(255, 255, 255, 0.35);
+
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+
+/* Hero Content */
+
+.care-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 580px;
+}
+
+.care-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+    padding: 7px 15px;
+
+    color: #087dbb;
+    background-color: #c7f0ef;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    border-radius: 30px;
+}
+
+.care-hero-content h1 {
+    margin-bottom: 20px;
+
+    color: #075b91;
+
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.care-hero-content h1 span {
+    display: block;
+    color: #13aebc;
+}
+
+.care-hero-description {
+    margin-bottom: 28px;
+
+    color: #526b7a;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* Hero Button */
+
+.care-hero-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 25px;
+
+    background-color: #087dbb;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border-radius: 9px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.care-hero-button:hover {
+    background-color: #055b8c;
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 15px rgba(8, 125, 187, 0.2);
+}
+
+.care-hero-button span {
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   06. HERO IMAGE
+   ===================================================== */
+
+.care-hero-visual {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+
+    border: 7px solid #ffffff;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 91, 145, 0.15);
+}
+
+
+/* Hero Image Caption */
+
+.hero-image-caption {
+    position: absolute;
+
+    left: 50%;
+    bottom: -22px;
+
+    width: 85%;
+    padding: 13px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+
+    box-shadow: 0 6px 20px rgba(0, 91, 145, 0.12);
+
+    transform: translateX(-50%);
+}
+
+.caption-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    color: #087dbb;
+    background-color: #e0f8f6;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    border-radius: 50%;
+}
+
+.hero-image-caption strong {
+    display: block;
+    color: #075b91;
+    font-size: 13px;
+}
+
+.hero-image-caption p {
+    color: #758995;
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   07. INTRODUCTION SECTION
+   ===================================================== */
+
+.care-introduction {
+    max-width: 950px;
+
+    margin: 100px auto 65px;
+    padding: 0 25px;
+
+    text-align: center;
+}
+
+
+/* Section Heading */
+
+.section-heading {
+    max-width: 800px;
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: #079eb1;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    color: #075b91;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.section-heading > p:not(.section-label) {
+    color: #687d89;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   08. CARE HIGHLIGHTS
+   ===================================================== */
+
+.care-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.highlight-item {
+    padding: 22px 15px;
+
+    background-color: #f5fcfd;
+    border: 1px solid #e1f1f4;
+
+    border-radius: 13px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 105, 145, 0.08);
+}
+
+.highlight-icon {
+    width: 43px;
+    height: 43px;
+
+    margin: 0 auto 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #dff7f6;
+    color: #087dbb;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    border-radius: 50%;
+}
+
+.highlight-item h3 {
+    margin-bottom: 5px;
+
+    color: #075b91;
+    font-size: 16px;
+}
+
+.highlight-item p {
+    color: #718591;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   09. CARE GUIDE SECTION
+   ===================================================== */
+
+.care-guide {
+    max-width: 1150px;
+
+    margin: 0 auto 90px;
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+
+/* =====================================================
+   10. CARE CARD
+   ===================================================== */
+
+.care-card {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dceff2;
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 105, 145, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.care-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #58cfda;
+
+    box-shadow: 0 12px 28px rgba(0, 125, 187, 0.12);
+}
+
+
+/* =====================================================
+   11. CARD IMAGE
+   ===================================================== */
+
+.care-card-image {
+    position: relative;
+
+    width: 100%;
+    height: 235px;
+
+    overflow: hidden;
+
+    background-color: #eaf8fc;
+}
+
+.care-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* Image Hover */
+
+.care-card:hover .care-card-image img {
+    transform: scale(1.05);
+}
+
+
+/* Image Number */
+
+.image-number {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #087dbb;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    border-radius: 11px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   12. CARD CONTENT
+   ===================================================== */
+
+.care-card-content {
+    flex: 1;
+    padding: 27px 28px 30px;
+}
+
+.care-topic-label {
+    display: inline-block;
+    margin-bottom: 8px;
+
+    color: #079eb1;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.care-card-content h3 {
+    margin-bottom: 12px;
+
+    color: #075b91;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.care-topic-description {
+    margin-bottom: 20px;
+
+    color: #647985;
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   13. CARE TIPS LIST
+   ===================================================== */
+
+.care-tips-list {
+    padding-left: 20px;
+
+    color: #526b7a;
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.care-tips-list li {
+    padding-left: 4px;
+    margin-bottom: 10px;
+}
+
+.care-tips-list li::marker {
+    color: #16b9c4;
+    font-weight: 800;
+}
+
+.care-tips-list strong {
+    color: #075b91;
+}
+
+
+/* =====================================================
+   14. FABRIC CARE CARD
+   ===================================================== */
+
+.fabric-card {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: stretch;
+}
+
+.fabric-card .care-card-image {
+    height: 100%;
+    min-height: 390px;
+}
+
+.fabric-card .care-card-image img {
+    object-fit: contain;
+    object-position: center;
+
+    background-color: #eef9fc;
+}
+
+.fabric-card .care-card-content {
+    padding: 35px;
+}
+
+
+/* =====================================================
+   15. CARE REMINDER
+   ===================================================== */
+
+.care-reminder {
+    position: relative;
+
+    max-width: 1150px;
+
+    margin: 0 auto 85px;
+    padding: 40px 45px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background-color: #eafafb;
+
+    border-left: 6px solid #16b9c4;
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+
+/* Reminder Decoration */
+
+.care-reminder::after {
+    content: "";
+
+    position: absolute;
+
+    top: -65px;
+    right: -45px;
+
+    width: 170px;
+    height: 170px;
+
+    background-color: rgba(82, 216, 210, 0.15);
+
+    border-radius: 50%;
+}
+
+
+/* Reminder Icon */
+
+.reminder-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+    background-color: #087dbb;
+
+    font-size: 27px;
+    font-weight: 800;
+
+    border-radius: 50%;
+}
+
+
+/* Reminder Content */
+
+.reminder-content {
+    position: relative;
+    z-index: 1;
+}
+
+.reminder-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #079eb1;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.reminder-content h2 {
+    margin-bottom: 12px;
+
+    color: #075b91;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.reminder-content p {
+    color: #526b7a;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   16. CLOSING SECTION
+   ===================================================== */
+
+.care-closing {
+    position: relative;
+
+    margin: 0 auto 80px;
+    padding: 70px 30px;
+
+    background: linear-gradient(
+        120deg,
+        #087dbb,
+        #16b9c4
+    );
+
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/* Closing Decoration */
+
+.care-closing::before {
+    content: "";
+
+    position: absolute;
+
+    top: -110px;
+    left: -70px;
+
+    width: 250px;
+    height: 250px;
+
+    border: 2px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 50%;
+}
+
+.care-closing::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -130px;
+    right: -60px;
+
+    width: 280px;
+    height: 280px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+}
+
+
+/* Closing Content */
+
+.care-closing-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.care-closing-label {
+    display: block;
+    margin-bottom: 12px;
+
+    color: #b9f7f2;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.care-closing-content h2 {
+    margin-bottom: 17px;
+
+    color: #ffffff;
+
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.care-closing-content p {
+    margin-bottom: 28px;
+
+    color: #e4fbff;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* Closing Button */
+
+.care-closing-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 28px;
+
+    background-color: #ffffff;
+    color: #087dbb;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    border-radius: 9px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.care-closing-button:hover {
+    background-color: #dffafa;
+    transform: translateY(-3px);
+}
+
+.care-closing-button span {
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   17. BACK TO TOP BUTTON
+   ===================================================== */
+
+.care-back-to-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #087dbb;
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    box-shadow: 0 5px 18px rgba(0, 91, 145, 0.25);
+
+    z-index: 100;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.care-back-to-top:hover {
+    background-color: #055b8c;
+    transform: translateY(-5px);
+}
+
+
+/* =====================================================
+   18. FOOTER
+   ===================================================== */
+
+.site-footer {
+    background-color: #063f68;
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 50px 35px 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+}
+
+
+/* Footer Brand */
+
+.footer-brand h2 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+    font-size: 23px;
+}
+
+.footer-brand p {
+    color: #c6e7f0;
+    font-size: 14px;
+}
+
+
+/* Footer Address */
+
+.footer-information h3 {
+    margin-bottom: 10px;
+
+    color: #8ce7e3;
+    font-size: 16px;
+}
+
+.footer-information p {
+    color: #c6e7f0;
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* Footer Copyright */
+
+.footer-bottom {
+    grid-column: 1 / -1;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #b8d8e3;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   19. TABLET RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+    /* Header */
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    /* Hero */
+
+    .care-hero {
+        margin: 25px 20px;
+        padding: 40px;
+
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+        text-align: center;
+    }
+
+    .care-hero-content {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .care-hero-visual {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+
+    /* Introduction */
+
+    .care-introduction {
+        margin-top: 85px;
+    }
+
+
+    /* Guide */
+
+    .care-guide {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Fabric Card */
+
+    .fabric-card {
+        grid-column: auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fabric-card .care-card-image {
+        height: 300px;
+        min-height: 0;
+    }
+
+
+    /* Reminder */
+
+    .care-reminder {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   20. MOBILE RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    .header-container {
+        padding: 15px;
+    }
+
+    .brand-logo {
+        font-size: 19px;
+    }
+
+    .brand-logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .navigation-list {
+        gap: 3px;
+    }
+
+    .navigation-list li a {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+
+
+    /* Hero */
+
+    .care-hero {
+        margin: 18px 12px;
+        padding: 30px 20px;
+
+        border-radius: 16px;
+        gap: 35px;
+    }
+
+    .care-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .care-hero-description {
+        font-size: 13px;
+    }
+
+    .hero-image {
+        height: 230px;
+        border-width: 5px;
+    }
+
+    .hero-image-caption {
+        width: 92%;
+        padding: 10px;
+    }
+
+
+    /* Introduction */
+
+    .care-introduction {
+        margin-top: 85px;
+        padding: 0 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .section-heading > p:not(.section-label) {
+        font-size: 13px;
+    }
+
+
+    /* Highlights */
+
+    .care-highlights {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .highlight-item {
+        padding: 17px;
+    }
+
+
+    /* Care Guide */
+
+    .care-guide {
+        padding: 0 15px;
+        gap: 22px;
+    }
+
+    .care-card {
+        border-radius: 14px;
+    }
+
+    .care-card-image {
+        height: 205px;
+    }
+
+    .care-card-content {
+        padding: 22px 20px 25px;
+    }
+
+    .care-card-content h3 {
+        font-size: 22px;
+    }
+
+    .care-topic-description {
+        font-size: 12px;
+    }
+
+    .care-tips-list {
+        font-size: 12px;
+    }
+
+
+    /* Fabric Care */
+
+    .fabric-card .care-card-image {
+        height: 220px;
+    }
+
+    .fabric-card .care-card-content {
+        padding: 22px 20px 25px;
+    }
+
+
+    /* Reminder */
+
+    .care-reminder {
+        margin: 0 15px 65px;
+        padding: 25px 20px;
+
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .reminder-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 20px;
+    }
+
+    .reminder-content h2 {
+        font-size: 21px;
+    }
+
+    .reminder-content p {
+        font-size: 12px;
+    }
+
+
+    /* Closing */
+
+    .care-closing {
+        padding: 55px 22px;
+    }
+
+    .care-closing-content h2 {
+        font-size: 27px;
+    }
+
+    .care-closing-content p {
+        font-size: 13px;
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        padding: 40px 22px 20px;
+
+        text-align: center;
+    }
+
+    .footer-bottom {
+        grid-column: auto;
+    }
+
+
+    /* Back To Top */
+
+    .care-back-to-top {
+        right: 15px;
+        bottom: 15px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 19px;
+    }
+
+}
+
+
+/* =====================================================
+   21. REDUCED MOTION ACCESSIBILITY
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+}
