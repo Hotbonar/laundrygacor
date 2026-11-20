@@ -1,0 +1,814 @@
+
+/* ============================================
+   LAUNDRY GACOR
+   HOW IT WORKS PAGE CSS Jhesen A.L :)
+   ============================================ */
+
+
+/* ============================================
+   1. GLOBAL SETTINGS
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #263746;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ============================================
+   2. HEADER AND NAVIGATION
+   ============================================ */
+
+.site-header {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #dceff2;
+
+    box-shadow: 0 3px 15px rgba(0, 91, 145, 0.07);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+}
+
+/* Brand Logo */
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #087dbb;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.brand-logo img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+/* Navigation List */
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    list-style: none;
+}
+
+.navigation-list li a {
+    display: block;
+
+    padding: 9px 12px;
+
+    color: #526675;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Navigation Hover */
+
+.navigation-list li a:hover {
+    color: #087dbb;
+    background-color: #eaf8fc;
+}
+
+/* Active Navigation */
+
+.navigation-list li a.active {
+    color: #ffffff;
+    background-color: #087dbb;
+}
+
+
+/* ============================================
+   3. HERO SECTION
+   ============================================ */
+
+.hero-section {
+    position: relative;
+
+    max-width: 1200px;
+    min-height: 490px;
+
+    margin: 35px auto;
+    padding: 55px 65px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+    gap: 45px;
+
+    background: linear-gradient(
+        120deg,
+        #eafafb,
+        #d6f5f5,
+        #effcff
+    );
+
+    border-radius: 22px;
+
+    overflow: hidden;
+}
+
+/* Decorative Bubble */
+
+.hero-section::before {
+    content: "";
+
+    position: absolute;
+    top: -100px;
+    right: 35%;
+
+    width: 220px;
+    height: 220px;
+
+    background-color: rgba(82, 216, 210, 0.17);
+
+    border: 2px solid rgba(8, 125, 187, 0.08);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.hero-section::after {
+    content: "";
+
+    position: absolute;
+    bottom: -100px;
+    left: -60px;
+
+    width: 260px;
+    height: 260px;
+
+    background-color: rgba(255, 255, 255, 0.35);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+/* Hero Content */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 590px;
+}
+
+.hero-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+    padding: 7px 15px;
+
+    color: #087dbb;
+    background-color: #c7f0ef;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    border-radius: 30px;
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+
+    color: #075b91;
+
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-description {
+    margin-bottom: 28px;
+
+    color: #526b7a;
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Hero Button */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    color: #ffffff;
+    background-color: #087dbb;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border-radius: 9px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #055b8c;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 15px rgba(8, 125, 187, 0.2);
+}
+
+/* Hero Image */
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 18px;
+
+    background-color: #ffffff;
+
+    border-radius: 25px;
+
+    box-shadow: 0 12px 35px rgba(0, 110, 155, 0.12);
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 360px;
+    height: 350px;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+}
+
+
+/* ============================================
+   4. PROCESS INTRODUCTION
+   ============================================ */
+
+.process-introduction {
+    max-width: 850px;
+
+    margin: 90px auto 45px;
+    padding: 0 25px;
+
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 10px;
+
+    color: #079eb1;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    margin-bottom: 17px;
+
+    color: #075b91;
+
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.section-heading > p:last-child {
+    color: #687d89;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* ============================================
+   5. LAUNDRY PROCESS SECTION
+   ============================================ */
+
+.laundry-process {
+    max-width: 1150px;
+
+    margin: 0 auto 90px;
+    padding: 0 30px;
+}
+
+/* Process Grid */
+
+.process-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+.process-item {
+    min-width: 0;
+}
+
+/* Process Card */
+
+.process-card {
+    position: relative;
+
+    height: 100%;
+    min-height: 215px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 28px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dceff2;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(0, 105, 145, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Process Card Hover */
+
+.process-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #58cfda;
+
+    box-shadow: 0 12px 28px rgba(0, 125, 187, 0.12);
+}
+
+/* Process Number */
+
+.process-number {
+    min-width: 53px;
+    height: 53px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #e1f8f8;
+    color: #087dbb;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    border-radius: 14px;
+}
+
+/* Process Content */
+
+.process-content {
+    flex: 1;
+}
+
+.process-content h3 {
+    margin-bottom: 3px;
+
+    color: #075b91;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.process-subtitle {
+    margin-bottom: 12px;
+
+    color: #079eb1;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.process-content > p:last-child {
+    color: #647985;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ============================================
+   6. CLOSING SECTION
+   ============================================ */
+
+.process-closing {
+    position: relative;
+
+    margin: 0 auto 80px;
+    padding: 65px 30px;
+
+    background: linear-gradient(
+        120deg,
+        #087dbb,
+        #16b9c4
+    );
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+/* Closing Decorative Circle */
+
+.process-closing::before {
+    content: "";
+
+    position: absolute;
+    top: -110px;
+    left: -70px;
+
+    width: 250px;
+    height: 250px;
+
+    border: 2px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 50%;
+}
+
+.process-closing::after {
+    content: "";
+
+    position: absolute;
+    bottom: -130px;
+    right: -60px;
+
+    width: 280px;
+    height: 280px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+}
+
+.closing-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.closing-label {
+    margin-bottom: 12px;
+
+    color: #b9f7f2;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.closing-content h2 {
+    margin-bottom: 17px;
+
+    color: #ffffff;
+
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.closing-content > p:not(.closing-label) {
+    margin-bottom: 28px;
+
+    color: #e4fbff;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Closing Button */
+
+.closing-button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background-color: #ffffff;
+    color: #087dbb;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    border-radius: 9px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.closing-button:hover {
+    background-color: #dffafa;
+
+    transform: translateY(-3px);
+}
+
+
+/* ============================================
+   7. BACK TO TOP BUTTON
+   ============================================ */
+
+.back-to-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #087dbb;
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    box-shadow: 0 5px 18px rgba(0, 91, 145, 0.25);
+
+    z-index: 100;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #055b8c;
+
+    transform: translateY(-5px);
+}
+
+
+/* ============================================
+   8. FOOTER
+   ============================================ */
+
+.site-footer {
+    background-color: #063f68;
+
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 50px 35px 20px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+}
+
+/* Footer Brand */
+
+.footer-brand h2 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+}
+
+.footer-brand p {
+    color: #c6e7f0;
+
+    font-size: 14px;
+}
+
+/* Footer Information */
+
+.footer-information h3 {
+    margin-bottom: 10px;
+
+    color: #8ce7e3;
+
+    font-size: 16px;
+}
+
+.footer-information p {
+    color: #c6e7f0;
+
+    font-size: 14px;
+}
+
+/* Footer Bottom */
+
+.footer-bottom {
+    grid-column: 1 / -1;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #b8d8e3;
+
+    font-size: 12px;
+}
+
+
+/* ============================================
+   9. RESPONSIVE LAYOUT
+   ============================================ */
+
+@media (max-width: 950px) {
+
+    .header-container {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navigation-list {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero-section {
+        margin: 25px 20px;
+        padding: 40px;
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero-image {
+        max-width: 430px;
+
+        margin: 0 auto;
+    }
+
+    .process-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ============================================
+   10. SMALL SCREEN ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 600px) {
+
+    .header-container {
+        padding: 15px;
+    }
+
+    .navigation-list {
+        gap: 3px;
+    }
+
+    .navigation-list li a {
+        padding: 7px 9px;
+
+        font-size: 12px;
+    }
+
+    .hero-section {
+        padding: 30px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-image img {
+        height: 260px;
+    }
+
+    .process-introduction {
+        margin-top: 55px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .process-card {
+        padding: 20px;
+
+        gap: 13px;
+    }
+
+    .process-content h3 {
+        font-size: 18px;
+    }
+
+    .closing-content h2 {
+        font-size: 27px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .footer-bottom {
+        grid-column: auto;
+    }
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+
+        width: 42px;
+        height: 42px;
+    }
+
+}
