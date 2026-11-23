@@ -1,0 +1,94 @@
+
+/* General */
+body {
+    margin: 0;
+    background-color: #eafafb;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Hero */
+.hero {
+    background-color: #087dbb;
+    color: white;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Content */
+.content {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.content h2,
+.information h2 {
+    color: #075b91;
+}
+
+.content p {
+    line-height: 1.8;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.timeline div {
+    flex: 1;
+    padding: 20px;
+    background-color: #eafafb;
+    border-left: 4px solid #16b9c4;
+}
+
+.timeline h3 {
+    color: #087dbb;
+}
+
+/* Vision and Mission */
+.information {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+}
+
+.information div {
+    flex: 1;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.information p,
+.information li {
+    line-height: 1.8;
+}
+
+/* Closing */
+.closing {
+    background-color: #075b91;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.closing h2 {
+    margin-bottom: 10px;
+}
